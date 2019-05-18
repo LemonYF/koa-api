@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "koa": "2.0.0",

@@ -7,6 +7,8 @@ const controller = require('./controller');
 
 const app = new Koa();
 
+const setGetTime = require('./src/getList')
+
 //它判断当前环境是否是production环境。如果是，就使用缓存，如果不是，就关闭缓存
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -35,4 +37,7 @@ app.use(templating('views', {
 app.use(controller());
 
 app.listen(3000);
+
+setInterval(setGetTime, 10 * 1000)
+
 console.log('app started at port 3000...');

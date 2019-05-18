@@ -33,6 +33,8 @@ function addControllers(router, dir) {
 }
 
 module.exports = function (dir) {
+    console.log('hello, 这是controller')
+    console.log('****************************')
     let
         controllers_dir = dir || 'controllers', // 如果不传参数，扫描目录默认为'controllers'
         router = require('koa-router')();
